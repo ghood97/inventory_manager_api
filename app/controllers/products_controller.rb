@@ -5,14 +5,14 @@ class ProductsController < ProtectedController
 
   # GET /products
   def index
-    @products = current_user.products
+    @products = Product.all
 
     render json: @products
   end
 
   # GET /products/1
   def show
-    @product = current_user.products.find(params[:id])
+    @product = Product.find(params[:id])
     render json: @product
   end
 
