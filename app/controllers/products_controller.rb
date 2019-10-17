@@ -1,17 +1,18 @@
 # frozen_string_literal: true
 
-class ProductsController < ApplicationController
+class ProductsController < ProtectedController
   before_action :set_product, only: %i[show update destroy]
 
   # GET /products
   def index
-    @products = Product.all
+    @products = current_user.products
 
     render json: @products
   end
 
   # GET /products/1
   def show
+    @product = current_user.products.find(params[:id])
     render json: @product
   end
 
