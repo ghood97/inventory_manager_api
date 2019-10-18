@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class InventoriesController < ApplicationController
+class InventoriesController < ProtectedController
   before_action :set_inventory, only: %i[show update destroy]
 
   # GET /inventories
   def index
-    @inventories = Inventory.all
+    @inventories = current_user.inventories
 
     render json: @inventories
   end
@@ -44,7 +44,7 @@ class InventoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_inventory
-    @inventory = Inventory.find(params[:id])
+    @inventory = current_user.inventories.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
