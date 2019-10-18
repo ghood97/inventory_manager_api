@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ProductsController < ProtectedController
+class ProductsController < OpenReadController
   before_action :set_product, only: %i[show update destroy]
 
   # GET /products
