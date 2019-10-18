@@ -5,7 +5,7 @@ class ProductsController < ProtectedController
 
   # GET /products
   def index
-    @products = Product.all
+    @products = Product.order(:name)
 
     render json: @products
   end
