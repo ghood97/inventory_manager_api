@@ -9,6 +9,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Inventory.destroy_all
+Product.destroy_all
 Product.create(name: 'Hammer', retail_price: '14.99')
 Product.create(name: 'Mallet', retail_price: '12.99')
 Product.create(name: 'Phillips Head Screwdriver',
@@ -47,3 +49,5 @@ Product.create(name: '30 Gal. 175psi Air Compressor',
                retail_price: '349.99')
 Product.create(name: '18V Oscillating Multi-Tool',
                retail_price: '119.99')
+
+puts "Created #{Product.count} entries."
