@@ -17,13 +17,13 @@ Product.create(name: 'Phillips Head Screwdriver',
                retail_price: '4.99')
 Product.create(name: '60lb Bag Mortar',
                retail_price: '16.99')
-Product.create(name: '12\" Compound Mitre Saw',
+Product.create(name: '12" Compound Mitre Saw',
                retail_price: '399.99')
 Product.create(name: 'Rocket Wood Plane',
                retail_price: '7.99')
 Product.create(name: 'Roofing Hammer',
                retail_price: '10.99')
-Product.create(name: '10\" Table Saw',
+Product.create(name: '10" Table Saw',
                retail_price: '249.99')
 Product.create(name: '36pc Mechanic\'s Socket Set',
                retail_price: '74.19')
@@ -37,7 +37,7 @@ Product.create(name: '4\' Level',
                retail_price: '22.79')
 Product.create(name: '5 Gal. Pre-Mixed Joint Compound',
                retail_price: '15.49')
-Product.create(name: '4 1/2\' Cordless Angle Grinder',
+Product.create(name: '4 1/2" Cordless Angle Grinder',
                retail_price: '399.98')
 Product.create(name: 'Lithium Ion Impact Wrench',
                retail_price: '268.99')
