@@ -17,7 +17,7 @@ class InventoriesController < ProtectedController
 
   # POST /inventories
   def create
-    @inventory = Inventory.new(inventory_params)
+    @inventory = current_user.inventories.build(inventory_params)
 
     if @inventory.save
       render json: @inventory, status: :created, location: @inventory
