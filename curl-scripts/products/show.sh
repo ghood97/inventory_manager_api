@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/products/${ID}" \
+curl "https://afternoon-sierra-41113.herokuapp.com/products/${ID}" \
   --include \
   --request GET \
   --header "Content-Type: application/json" \

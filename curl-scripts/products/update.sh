@@ -1,4 +1,4 @@
-curl "http://localhost:4741/products/${ID}" \
+curl "https://afternoon-sierra-41113.herokuapp.com/products/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
