@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :inventories, except: %i[new edit]
+  resources :inventories, except: %i[show new edit]
   resources :products, except: %i[create update destroy new edit]
   # RESTful routes
   resources :examples, except: %i[new edit]
