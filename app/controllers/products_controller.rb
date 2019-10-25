@@ -5,9 +5,18 @@ class ProductsController < OpenReadController
 
   # GET /products
   def index
-    @products = Product.order(:id)
+    @products = Product.all
 
-    render json: @products
+    if params.key?(:name)
+      results = @products.filter { |x| x.name.downcase.include? params[:name].downcase }
+      if results.any?
+        render json: results
+      else
+        render json: {}
+      end
+    else
+      render json: @products
+    end
   end
 
   # GET /products/1
