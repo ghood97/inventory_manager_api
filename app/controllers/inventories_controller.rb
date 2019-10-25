@@ -7,7 +7,16 @@ class InventoriesController < ProtectedController
   def index
     @inventories = current_user.inventories
 
-    render json: @inventories
+    if params.key?(:name)
+      results = @inventories.filter { |x| x.product.name.downcase.include? params[:name].downcase }
+      if results.any?
+        render json: results
+      else
+        render json: {}
+      end
+    else
+      render json: @inventories
+    end
   end
 
   # GET /inventories/1
